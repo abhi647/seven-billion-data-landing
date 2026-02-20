@@ -33,18 +33,18 @@ const ThankYou = () => {
       <div className="pt-32 pb-20">
         <div className="container mx-auto px-6 max-w-2xl text-center">
           <div className="flex justify-center mb-6">
-            <div className="p-4 rounded-full bg-teal/10 border border-teal/30 teal-glow">
+            <div className="p-4 rounded-full bg-teal-light border border-teal/30 shadow-teal">
               <CheckCircle2 size={48} className="text-teal" />
             </div>
           </div>
 
-          <p className="text-teal text-sm font-medium uppercase tracking-widest mb-3">You're Confirmed</p>
-          <h1 className="font-display text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            Congratulations – Your Strategy Call with{" "}
-            <span className="gradient-text">Seven Billion Data</span>{" "}
+          <p className="font-body text-teal text-sm font-medium uppercase tracking-widest mb-3">You're Confirmed</p>
+          <h1 className="font-display text-3xl lg:text-4xl font-semibold text-navy mb-4">
+            Congratulations — Your Strategy Call with{" "}
+            <em className="not-italic gradient-text">Seven Billion Data</em>{" "}
             is Confirmed
           </h1>
-          <p className="text-muted-foreground text-lg mb-12">
+          <p className="font-body text-muted-foreground text-lg mb-12">
             Here's what happens next (and how to get the most value from our time together):
           </p>
 
@@ -52,27 +52,27 @@ const ThankYou = () => {
             {steps.map((step, i) => (
               <div
                 key={i}
-                className="flex items-start gap-4 bg-gradient-card border border-navy-border rounded-xl p-5 card-glow"
+                className="flex items-start gap-4 bg-card border border-border rounded-xl p-5 shadow-card"
               >
-                <div className="p-2.5 rounded-lg bg-teal/10 border border-teal/20 shrink-0">
+                <div className="p-2.5 rounded-lg bg-teal-light border border-teal/20 shrink-0">
                   <step.icon size={20} className="text-teal" />
                 </div>
                 <div>
-                  <h4 className="font-display font-semibold text-foreground text-sm mb-1">
+                  <h4 className="font-display font-semibold text-navy text-sm mb-1">
                     {i + 1}. {step.title}
                   </h4>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{step.desc}</p>
+                  <p className="font-body text-muted-foreground text-sm leading-relaxed">{step.desc}</p>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="bg-gradient-card border border-teal/20 rounded-2xl p-8 teal-glow">
-            <p className="text-foreground text-base leading-relaxed">
+          <div className="bg-teal-light border border-teal/20 rounded-2xl p-8 shadow-teal">
+            <p className="font-body text-navy-soft text-base leading-relaxed">
               We're excited to show you exactly how the{" "}
               <span className="text-teal font-semibold">FMCG Decision Engine™</span>{" "}
               can turn your messy enterprise data into a structured decision system — and map out a clear{" "}
-              <span className="text-foreground font-semibold">90–120 day implementation path</span>{" "}
+              <span className="text-navy font-semibold">90–120 day implementation path</span>{" "}
               for your organisation.
             </p>
           </div>
@@ -80,13 +80,13 @@ const ThankYou = () => {
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <Link
               to="/"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-navy-border text-muted-foreground text-sm font-medium hover:text-foreground hover:border-teal/30 transition-all"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-border font-body text-muted-foreground text-sm font-medium hover:text-foreground hover:border-teal/30 transition-all"
             >
               Back to Home
             </Link>
             <Link
               to="/apply"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-teal/10 border border-teal/30 text-teal text-sm font-medium hover:bg-teal hover:text-navy-deep transition-all"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-teal-light border border-teal/30 font-body text-teal text-sm font-medium hover:bg-teal hover:text-primary-foreground transition-all"
             >
               Book Another Session
             </Link>
