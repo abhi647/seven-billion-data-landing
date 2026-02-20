@@ -47,8 +47,8 @@ const Apply = () => {
   };
 
   const inputClass =
-    "w-full bg-navy-mid border border-navy-border rounded-lg px-4 py-3 text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:border-teal/60 focus:ring-1 focus:ring-teal/30 transition-all";
-  const labelClass = "block text-sm font-medium text-foreground mb-1.5";
+    "w-full bg-background border border-border rounded-lg px-4 py-3 text-foreground font-body text-sm placeholder:text-muted-foreground focus:outline-none focus:border-teal focus:ring-1 focus:ring-teal/20 transition-all";
+  const labelClass = "block font-body text-sm font-medium text-foreground mb-1.5";
   const selectClass = `${inputClass} appearance-none cursor-pointer`;
 
   return (
@@ -58,20 +58,20 @@ const Apply = () => {
         <div className="container mx-auto px-6 max-w-3xl">
           {/* Header */}
           <div className="text-center mb-12">
-            <p className="text-teal text-sm font-medium uppercase tracking-widest mb-3">Free Strategy Session</p>
-            <h1 className="font-display text-3xl lg:text-4xl font-bold text-foreground mb-4">
+            <p className="font-body text-teal text-sm font-medium uppercase tracking-widest mb-3">Free Strategy Session</p>
+            <h1 className="font-display text-3xl lg:text-4xl font-semibold text-navy mb-4">
               Schedule a Free 1:1{" "}
-              <span className="gradient-text">FMCG Decision Engine™</span>{" "}
+              <em className="not-italic gradient-text">FMCG Decision Engine™</em>{" "}
               Discovery Call
             </h1>
-            <p className="text-muted-foreground max-w-xl mx-auto">
+            <p className="font-body text-muted-foreground max-w-xl mx-auto">
               In this 45-minute session, we'll audit your current data & BI setup and map a 90–120 day pathway to a single source of truth for your leadership team.
             </p>
           </div>
 
           {/* What we'll cover */}
-          <div className="bg-gradient-card border border-navy-border rounded-2xl p-6 mb-10">
-            <h3 className="font-display font-semibold text-foreground mb-4 text-sm uppercase tracking-wider">On this call, we will:</h3>
+          <div className="bg-teal-light border border-teal/20 rounded-2xl p-6 mb-10">
+            <h3 className="font-display font-semibold text-navy mb-4 text-sm uppercase tracking-wider">On this call, we will:</h3>
             <ul className="space-y-3">
               {[
                 "Audit your current ERP, distributor & sales data flows and identify key integration gaps.",
@@ -81,15 +81,15 @@ const Apply = () => {
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <CheckCircle2 size={16} className="text-teal mt-0.5 shrink-0" />
-                  <span className="text-sm text-muted-foreground">{item}</span>
+                  <span className="font-body text-sm text-navy-soft">{item}</span>
                 </li>
               ))}
             </ul>
           </div>
 
           {/* Form */}
-          <form onSubmit={handleSubmit} className="bg-gradient-card border border-navy-border rounded-2xl p-8 card-glow space-y-6">
-            <h3 className="font-display font-semibold text-foreground text-lg mb-2">Tell us about yourself</h3>
+          <form onSubmit={handleSubmit} className="bg-card border border-border rounded-2xl p-8 shadow-card space-y-6">
+            <h3 className="font-display font-semibold text-navy text-xl mb-2">Tell us about yourself</h3>
 
             <div className="grid sm:grid-cols-2 gap-4">
               <div>
@@ -168,10 +168,10 @@ const Apply = () => {
                     key={o}
                     type="button"
                     onClick={() => toggleOutcome(o)}
-                    className={`text-left px-3 py-2.5 rounded-lg border text-sm transition-all ${
+                    className={`text-left px-3 py-2.5 rounded-lg border font-body text-sm transition-all ${
                       form.outcome.includes(o)
-                        ? "border-teal bg-teal/10 text-teal"
-                        : "border-navy-border text-muted-foreground hover:border-teal/40"
+                        ? "border-teal bg-teal-light text-teal"
+                        : "border-border text-muted-foreground hover:border-teal/40"
                     }`}
                   >
                     {o}
@@ -214,7 +214,7 @@ const Apply = () => {
 
             <button
               type="submit"
-              className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-lg bg-teal text-navy-deep font-semibold text-base hover:bg-teal-glow transition-all shadow-teal animate-glow-pulse"
+              className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-lg bg-teal text-primary-foreground font-body font-semibold text-base hover:opacity-90 transition-all shadow-teal"
             >
               Confirm My Strategy Call
               <ArrowRight size={18} />

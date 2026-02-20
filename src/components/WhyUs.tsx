@@ -42,37 +42,37 @@ const stats = [
 
 const WhyUs = () => {
   return (
-    <section id="why-us" className="py-24 bg-navy-mid">
+    <section id="why-us" className="py-24 bg-secondary/40">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <p className="text-teal text-sm font-medium uppercase tracking-widest mb-3">Why Seven Billion Data</p>
-          <h2 className="font-display text-3xl lg:text-4xl font-bold text-foreground mb-4">
+          <p className="font-body text-teal text-sm font-medium uppercase tracking-widest mb-3">Why Seven Billion Data</p>
+          <h2 className="font-display text-3xl lg:text-4xl font-semibold text-navy mb-4">
             Why FMCG Enterprises Partner with{" "}
-            <span className="gradient-text">Seven Billion Data</span>
+            <em className="not-italic gradient-text">Seven Billion Data</em>
           </h2>
         </div>
 
         {/* Stats Row */}
-        <div className="grid grid-cols-3 gap-6 mb-16 max-w-2xl mx-auto">
+        <div className="grid grid-cols-3 gap-6 mb-16 max-w-xl mx-auto">
           {stats.map((s, i) => (
             <div key={i} className="text-center">
-              <p className="font-display text-3xl font-bold gradient-text mb-1">{s.value}</p>
-              <p className="text-xs text-muted-foreground leading-tight">{s.label}</p>
+              <p className="font-display text-3xl font-semibold gradient-text mb-1">{s.value}</p>
+              <p className="font-body text-xs text-muted-foreground leading-tight">{s.label}</p>
             </div>
           ))}
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
           {reasons.map((r, i) => (
             <div
               key={i}
-              className="bg-gradient-card border border-navy-border rounded-xl p-6 card-glow hover:border-teal/30 transition-all group"
+              className="bg-card border border-border rounded-xl p-6 shadow-card hover:border-teal/30 hover:shadow-teal transition-all group"
             >
-              <div className="p-2.5 rounded-lg bg-teal/10 border border-teal/20 w-fit mb-4 group-hover:bg-teal/20 transition-colors">
-                <r.icon size={20} className="text-teal" />
+              <div className="p-2.5 rounded-lg bg-teal-light border border-teal/20 w-fit mb-4 group-hover:bg-teal group-hover:border-teal transition-colors">
+                <r.icon size={19} className="text-teal group-hover:text-primary-foreground transition-colors" />
               </div>
-              <h3 className="font-display font-semibold text-foreground text-sm mb-2 leading-snug">{r.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{r.desc}</p>
+              <h3 className="font-display font-semibold text-navy text-base mb-2 leading-snug">{r.title}</h3>
+              <p className="font-body text-muted-foreground text-sm leading-relaxed">{r.desc}</p>
             </div>
           ))}
         </div>
@@ -80,7 +80,7 @@ const WhyUs = () => {
         <div className="text-center">
           <Link
             to="/apply"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-teal text-navy-deep font-semibold text-base hover:bg-teal-glow transition-all shadow-teal"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-teal text-primary-foreground font-body font-semibold text-base hover:opacity-90 transition-all shadow-teal"
           >
             Schedule A Free 1:1 Discovery Call
             <ArrowRight size={18} />
