@@ -3,48 +3,43 @@ import { ArrowRight } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="border-t border-border bg-card py-12">
+    <footer className="border-t border-slate-800 bg-navy py-12 text-slate-300">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-10 mb-10">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="h-7 w-7 rounded bg-gradient-teal flex items-center justify-center">
-                <span className="font-display text-xs font-bold text-primary-foreground">7B</span>
-              </div>
-              <span className="font-display text-lg font-semibold text-navy">
-                Seven Billion <span className="text-teal">Data</span>
-              </span>
+              <img src="/custom-logo.svg" alt="Seven Billion Data" className="h-8 w-auto" />
             </div>
-            <p className="font-body text-muted-foreground text-sm leading-relaxed max-w-xs">
+            <p className="font-body text-slate-400 text-sm leading-relaxed max-w-xs">
               FMCG Decision Intelligence implementation partner. Single source of truth in 90–120 days.
             </p>
           </div>
 
           <div>
-            <h4 className="font-display font-semibold text-navy text-sm mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              <li><a href="#case-studies" className="font-body text-sm text-muted-foreground hover:text-teal transition-colors">Case Studies</a></li>
-              <li><a href="#why-us" className="font-body text-sm text-muted-foreground hover:text-teal transition-colors">Why Us</a></li>
-              <li><Link to="/apply" className="font-body text-sm text-muted-foreground hover:text-teal transition-colors">Book Strategy Call</Link></li>
+            <h4 className="font-display font-semibold text-white text-base mb-4 tracking-wide">Quick Links</h4>
+            <ul className="space-y-3">
+              <li><a href="#case-studies" className="font-body text-sm text-slate-400 hover:text-teal-400 transition-colors">Case Studies</a></li>
+              <li><a href="#why-us" className="font-body text-sm text-slate-400 hover:text-teal-400 transition-colors">Why Us</a></li>
+              <li><Link to="/apply" className="font-body text-sm text-slate-400 hover:text-teal-400 transition-colors">Book Strategy Call</Link></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-display font-semibold text-navy text-sm mb-4">Ready to get started?</h4>
-            <p className="font-body text-muted-foreground text-sm mb-4">Claim your free 45-minute FMCG Decision Engine™ strategy session.</p>
+            <h4 className="font-display font-semibold text-white text-base mb-4 tracking-wide">Ready to get started?</h4>
+            <p className="font-body text-slate-400 text-sm mb-6">Claim your free 45-minute FMCG Decision Engine™ strategy session.</p>
             <Link
               to="/apply"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-teal text-primary-foreground font-body text-sm font-semibold hover:opacity-90 transition-all"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-teal-500/10 to-cyan-600/10 border border-teal-500/50 text-teal-400 font-body text-sm font-bold hover:bg-teal-500 hover:text-white transition-all shadow-lg"
             >
               Book Free Call
-              <ArrowRight size={14} />
+              <ArrowRight size={16} />
             </Link>
           </div>
         </div>
 
-        <div className="border-t border-border pt-6 flex flex-wrap items-center justify-between gap-4">
-          <p className="font-body text-muted-foreground text-xs">© 2024 Seven Billion Data. All rights reserved.</p>
-          <p className="font-body text-muted-foreground text-xs">FMCG Decision Intelligence · Built for Indian Enterprise</p>
+        <div className="border-t border-slate-800 pt-8 flex flex-wrap items-center justify-between gap-4">
+          <p className="font-body text-slate-500 text-xs">© 2024 Seven Billion Data. All rights reserved.</p>
+          <p className="font-body text-slate-500 text-xs font-medium">FMCG Decision Intelligence · Built for Indian Enterprise</p>
         </div>
       </div>
     </footer>

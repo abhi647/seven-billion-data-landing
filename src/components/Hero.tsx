@@ -1,86 +1,107 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle2, Calendar } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
-
-const benefits = [
-  "Why your ERP & sales systems don't talk to each other — and what it costs you monthly",
-  "A gameplan to move from Excel-based reporting to automated, governed BI",
-  "Time-saving workflows to cut 70–80% of manual reporting effort",
-  "A 90–120 day implementation pathway using the FMCG Decision Engine™",
-];
+import { ArrowRight, CheckCircle2, Calendar, PlayCircle } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative pt-16 overflow-hidden bg-gradient-hero">
-      {/* Subtle teal blob top right */}
-      <div className="absolute top-0 right-0 w-[600px] h-[500px] bg-teal-light rounded-full opacity-40 blur-3xl -translate-y-1/3 translate-x-1/3 pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-teal-light rounded-full opacity-30 blur-3xl translate-y-1/2 -translate-x-1/2 pointer-events-none" />
+    <section className="relative pt-24 pb-32 overflow-hidden bg-background text-foreground">
+      {/* Background Layer */}
+      <div className="absolute inset-0 bg-white/40"></div>
+      
+      {/* Simple, subtle accents instead of glowing dark mode blobs */}
+      <div className="absolute top-0 right-0 w-[50vw] h-[50vw] max-w-[700px] max-h-[600px] bg-teal-100 rounded-full opacity-60 blur-[100px] -translate-y-1/4 translate-x-1/4 pointer-events-none" />
+      <div className="absolute bottom-10 left-0 w-[40vw] h-[40vw] max-w-[500px] max-h-[500px] bg-cyan-50 rounded-full opacity-60 blur-[100px] translate-y-1/2 -translate-x-1/4 pointer-events-none" />
 
-      <div className="container mx-auto px-6 relative z-10 py-24">
-        <div className="grid lg:grid-cols-2 gap-14 items-center">
-          {/* Left Column */}
-          <div className="animate-fade-in-up">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-teal/30 bg-teal-light text-teal text-xs font-body font-medium mb-6">
-              For CIOs, IT Leaders & Digital Transformation Heads in Indian FMCG
-            </div>
-
-            <h1 className="font-display text-4xl lg:text-5xl xl:text-[3.5rem] font-semibold leading-tight text-navy mb-6">
-              Turn Fragmented FMCG Data into a{" "}
-              <em className="not-italic gradient-text">Single Source of Truth</em>{" "}
-              in 90–120 Days
-            </h1>
-
-            <p className="font-body text-muted-foreground text-lg leading-relaxed mb-8 max-w-xl">
-              Implement a complete BI & Decision Intelligence system so your leadership finally gets a single, reliable view of sales, inventory & supply chain — without hiring a large internal data team or struggling with Excel-based reports.
-            </p>
-
-            <Link
-              to="/apply"
-              className="inline-flex items-center gap-2 px-7 py-4 rounded-lg bg-teal text-primary-foreground font-body font-semibold text-base hover:opacity-90 transition-all shadow-teal animate-glow-pulse"
-            >
-              Book Your Free Data Strategy Call
-              <ArrowRight size={18} />
-            </Link>
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="max-w-4xl mx-auto text-center mb-16 animate-fade-in-up">
+          {/* Target Audience Call Out */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-teal-200 bg-teal-50 text-teal-800 text-sm font-body font-medium mb-8">
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-teal-500"></span>
+            </span>
+            ATTENTION: CIOs & Digital Transformation Heads in Indian FMCG
           </div>
 
-          {/* Right Column – Strategy Call Card */}
-          <div className="bg-card border border-border rounded-2xl p-8 shadow-md">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="p-2 rounded-lg bg-teal-light border border-teal/20">
-                <Calendar className="text-teal" size={22} />
-              </div>
-              <div>
-                <p className="font-body text-xs text-muted-foreground uppercase tracking-wider">Claim Your</p>
-                <h3 className="font-display font-semibold text-navy text-base">FMCG Decision Engine™ Session</h3>
-              </div>
-            </div>
+          {/* Specific Benefit Driven Headline */}
+          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-light text-navy mb-6 tracking-tight">
+            Stop Relying on <em className="italic text-primary font-light">Guesswork & Excel</em>: Build a <br className="hidden lg:block" />
+            <em className="italic text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-cyan-500 font-light tracking-normal">
+              Single Source of Truth
+            </em>
+          </h1>
 
-            <p className="font-body text-muted-foreground text-sm mb-6">
-              In this <span className="text-foreground font-medium">45-minute strategy call</span>, you'll get:
-            </p>
+          {/* Subheadline (USP & Pain Points) */}
+          <p className="font-body text-foreground/80 text-lg md:text-xl leading-relaxed mb-10 max-w-2xl mx-auto font-light">
+            We help FMCG enterprises unify fragmented ERP, distributor, and sales operations data into 
+            an automated Decision Intelligence system—without hiring an expensive internal data team.
+          </p>
 
-            <ul className="space-y-4">
-              {benefits.map((b, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <CheckCircle2 size={17} className="text-teal mt-0.5 shrink-0" />
-                  <span className="font-body text-sm text-muted-foreground leading-snug">{b}</span>
-                </li>
-              ))}
-            </ul>
-
+          <div className="flex justify-center">
+            {/* CTA */}
             <Link
               to="/apply"
-              className="mt-8 w-full inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-lg border border-teal text-teal font-body font-semibold text-sm hover:bg-teal hover:text-primary-foreground transition-all"
+              className="w-full md:w-auto inline-flex items-center justify-center gap-3 px-10 py-5 rounded-full bg-primary text-white font-body font-semibold text-xl hover:scale-105 transition-all duration-300 shadow-xl shadow-teal-500/20"
             >
-              Schedule My Free Strategy Session
-              <ArrowRight size={16} />
+              Book Your Free 1:1 Strategy Call
+              <ArrowRight
+                size={22}
+                className="group-hover:translate-x-1 transition-transform"
+              />
             </Link>
           </div>
         </div>
-      </div>
 
-      {/* Bottom separator */}
-      <div className="h-px bg-border mx-6" />
+        {/* Image/B2B VSL Section */}
+        <div
+          className="relative mx-auto w-full max-w-5xl rounded-2xl overflow-hidden border border-gray-200 shadow-2xl mt-12 animate-fade-in-up group bg-white"
+          style={{ animationDelay: "0.2s" }}
+        >
+          {/* Overlay to dim VSL placeholder slightly */}
+          <div className="absolute inset-0 bg-black/5 z-10 pointer-events-none group-hover:bg-transparent transition-colors duration-500"></div>
+
+          {/* VSL Video Player */}
+          <div className="relative aspect-video bg-navy/5 rounded-2xl overflow-hidden shadow-sm">
+            <video 
+              src="/vsl-video.mp4" 
+              controls 
+              playsInline
+              className="w-full h-full object-cover"
+              poster="/dashboard-mockup.png"
+            >
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+
+        {/* VSL Value Props Grid */}
+        <div className="max-w-5xl mx-auto mt-12 grid md:grid-cols-2 lg:grid-cols-4 gap-6 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
+            <div className="bg-white border border-gray-100 shadow-sm p-6 rounded-2xl">
+                <h4 className="text-navy font-semibold mb-2 font-display text-lg">Clarity</h4>
+                <p className="text-foreground/70 text-sm leading-relaxed font-body font-light">Map exactly where your data leakages are happening across supply chain and sales.</p>
+            </div>
+            <div className="bg-white border border-gray-100 shadow-sm p-6 rounded-2xl">
+                <h4 className="text-navy font-semibold mb-2 font-display text-lg">Sustainable Gameplan</h4>
+                <p className="text-foreground/70 text-sm leading-relaxed font-body font-light">A governed data architecture that scales with your business complexity.</p>
+            </div>
+            <div className="bg-white border border-gray-100 shadow-sm p-6 rounded-2xl">
+                <h4 className="text-navy font-semibold mb-2 font-display text-lg">Time-Saving Hacks</h4>
+                <p className="text-foreground/70 text-sm leading-relaxed font-body font-light">Automated ETL pipelines that instantly cut 80% of manual reporting effort.</p>
+            </div>
+            <div className="bg-white border border-gray-100 shadow-sm p-6 rounded-2xl">
+                <h4 className="text-navy font-semibold mb-2 font-display text-lg">90-Day Pathway</h4>
+                <p className="text-foreground/70 text-sm leading-relaxed font-body font-light">Step-by-step roadmap to a fully functional executive command center.</p>
+            </div>
+        </div>
+
+        <div className="text-center mt-12 animate-fade-in-up" style={{ animationDelay: "0.5s" }}>
+            <Link
+              to="/apply"
+              className="inline-flex items-center justify-center text-primary hover:text-teal-700 font-semibold underline underline-offset-4 transition-all"
+            >
+              Claim your 1:1 session today
+            </Link>
+        </div>
+      </div>
     </section>
   );
 };

@@ -1,94 +1,117 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Building2, Layers, Clock, Target, BarChart3, Users } from "lucide-react";
+import { ArrowRight, CheckCircle2, XCircle, TrendingUp } from "lucide-react";
 
-const reasons = [
+const objections = [
   {
-    icon: Building2,
-    title: "Built for FMCG complexity, not generic BI.",
-    desc: "We specialise in FMCG enterprises with fragmented systems & under-utilised BI infrastructure. We already understand your distributor, channel & SKU-level realities.",
+    objection: "We tried building this internally, but IT took 8 months and the dashboards were unusable.",
+    reality: "Internal IT teams are brilliant at infrastructure, but they aren't <strong class='text-teal-700'>commercial data specialists</strong>. We <em>only</em> build for FMCG. We bring pre-built data models for secondary sales, distributor margins, and inventory tracking, which is why our rollout takes 90-120 days, not absolute years."
   },
   {
-    icon: Layers,
-    title: "End-to-end Decision Intelligence, not just dashboards.",
-    desc: "We don't stop at visualisation. We design data warehouse, ETL/ELT, governance & KPI architecture, and connect it all the way to your leadership decision workflows.",
+    objection: "We use a big consulting firm (Big 4) and we still don't have a single source of truth.",
+    reality: "Big consultancies charge for the <em>process</em> (hours billed), not the <em>outcome</em>. We deploy a specific framework, the FMCG Decision Engine. You aren't paying for juniors to learn on your dime; you're getting a <strong class='text-teal-700'>proven system implemented by veterans</strong> with zero bloated retainer fees."
   },
   {
-    icon: Clock,
-    title: "Single Source of Truth in 90–120 Days.",
-    desc: "Using our FMCG Decision Engine™ framework (Data Foundation → Infrastructure Build → Insight & Decision Layer), we build a robust BI layer in 3–4 months.",
-  },
-  {
-    icon: Target,
-    title: "Business-first, technology-second approach.",
-    desc: "We start with leadership KPIs & decision needs, then design the data architecture around that — so the system actually gets adopted instead of becoming another unused dashboard project.",
-  },
-  {
-    icon: BarChart3,
-    title: "Executive-friendly outputs every month.",
-    desc: "You get a Monthly Executive One-Page Business Summary and a Decision Workshop with leadership so insights are turned into real commercial decisions.",
-  },
-  {
-    icon: Users,
-    title: "Technical implementation partner, not a body shop.",
-    desc: "We act as your Decision Intelligence implementation partner, giving you a dedicated technical lead and structured documentation — without you needing to hire a full in-house data team.",
-  },
-];
-
-const stats = [
-  { value: "90–120", label: "Days to Single Source of Truth" },
-  { value: "70–80%", label: "Reduction in Manual Reporting" },
-  { value: "60%", label: "Faster Monthly Closing" },
+    objection: "Our data is too messy. Distributors send manual Excel files. It's impossible to automate.",
+    reality: "We hear this <em>every</em> time. <strong>Messy data is our starting line.</strong> We specialize in building automated ingestion pipelines that clean, standardize, and map unstructured Excel files into a governed data warehouse before it ever hits a dashboard."
+  }
 ];
 
 const WhyUs = () => {
-  return (
-    <section id="why-us" className="py-24 bg-secondary/40">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <p className="font-body text-teal text-sm font-medium uppercase tracking-widest mb-3">Why Seven Billion Data</p>
-          <h2 className="font-display text-3xl lg:text-4xl font-semibold text-navy mb-4">
-            Why FMCG Enterprises Partner with{" "}
-            <em className="not-italic gradient-text">Seven Billion Data</em>
-          </h2>
-        </div>
+    return (
+        <section id="why-us" className="py-24 bg-white text-foreground overflow-hidden">
+            <div className="container mx-auto px-6 max-w-5xl relative z-10">
+                
+                {/* Objections Header */}
+                <div className="text-center mb-16 animate-fade-in-up">
+                    <h2 className="font-display text-4xl lg:text-5xl font-light text-navy mb-8 tracking-tight">
+                        Why Traditional Approaches Keep <br className="hidden md:block"/> 
+                        <em className="italic text-primary">FMCG Brands Stuck</em>
+                    </h2>
+                    <p className="font-body text-gray-600 text-lg md:text-xl font-light max-w-2xl mx-auto">
+                        We hear the same frustrations from CIOs every week. Here is why the standard playbook is failing you—and what we do differently.
+                    </p>
+                </div>
 
-        {/* Stats Row */}
-        <div className="grid grid-cols-3 gap-6 mb-16 max-w-xl mx-auto">
-          {stats.map((s, i) => (
-            <div key={i} className="text-center">
-              <p className="font-display text-3xl font-semibold gradient-text mb-1">{s.value}</p>
-              <p className="font-body text-xs text-muted-foreground leading-tight">{s.label}</p>
+                <div className="space-y-6">
+                    {objections.map((obj, i) => (
+                        <div key={i} className="animate-fade-in-up" style={{ animationDelay: `${i * 0.1}s` }}>
+                            {/* Desktop/Tablet Layout */}
+                            <div className="hidden md:flex gap-6 max-w-5xl mx-auto">
+                                <div className="flex-[0.8] bg-red-50 rounded-2xl p-8 border border-red-100 flex flex-col justify-center shadow-sm">
+                                    <div className="flex items-center gap-3 mb-4">
+                                        <XCircle className="text-red-500" size={24} />
+                                        <h3 className="font-display text-xl font-light text-gray-900 leading-none">The Trap</h3>
+                                    </div>
+                                    <p className="font-body text-gray-700 italic text-lg leading-relaxed">
+                                        "{obj.objection}"
+                                    </p>
+                                </div>
+
+                                <div className="flex-[1.2] bg-teal-50 rounded-2xl p-8 border border-teal-100 shadow-sm relative overflow-hidden group hover:shadow-md transition-all">
+                                    <div className="absolute top-0 right-0 w-48 h-48 bg-teal-200 rounded-full blur-[60px] opacity-30 -mr-16 -mt-16 transition-opacity group-hover:opacity-60"></div>
+                                    <div className="flex items-center gap-3 mb-4 relative z-10">
+                                        <CheckCircle2 className="text-teal-600" size={24} />
+                                        <h3 className="font-display text-xl font-light text-teal-900 leading-none">Our Reality</h3>
+                                    </div>
+                                    <p className="font-body text-gray-700 text-[1.1rem] leading-relaxed relative z-10 font-light" dangerouslySetInnerHTML={{ __html: obj.reality }}></p>
+                                </div>
+                            </div>
+
+                            {/* Mobile Layout */}
+                            <div className="md:hidden flex flex-col gap-3">
+                                {/* Objection Side */}
+                                <div className="flex-1 bg-red-50 rounded-2xl p-6 border border-red-100 flex flex-col justify-center">
+                                    <div className="flex items-center gap-3 mb-4">
+                                        <div className="bg-red-100 p-2 rounded-lg">
+                                            <XCircle className="text-red-500" size={24} />
+                                        </div>
+                                        <h3 className="font-display text-xl font-light text-gray-900">The Common Trap</h3>
+                                    </div>
+                                    <p className="font-body text-gray-700 italic text-lg leading-relaxed">
+                                        "{obj.objection}"
+                                    </p>
+                                </div>
+
+                                {/* Reality Side */}
+                                <div className="flex-1 bg-teal-50 rounded-2xl p-6 border border-teal-100 flex flex-col justify-center relative overflow-hidden">
+                                    <div className="absolute top-0 right-0 w-32 h-32 bg-teal-200 rounded-full blur-[50px] opacity-20 -mr-10 -mt-10"></div>
+                                    <div className="flex items-center gap-3 mb-4 relative z-10">
+                                        <div className="bg-teal-100 p-2 rounded-lg">
+                                            <CheckCircle2 className="text-teal-600" size={24} />
+                                        </div>
+                                        <h3 className="font-display text-xl font-light text-teal-900">The Seven Billion Reality</h3>
+                                    </div>
+                                    <p className="font-body text-gray-700 leading-relaxed relative z-10 font-light" dangerouslySetInnerHTML={{ __html: obj.reality }}></p>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                {/* Final Wrap-up */}
+                <div className="mt-20 text-center animate-fade-in-up">
+                    <div className="inline-block p-1 rounded-full bg-gradient-to-r from-gray-200 to-gray-100 mb-8">
+                        <div className="bg-white rounded-full px-8 py-4 flex items-center gap-4 border border-gray-100">
+                             <TrendingUp className="text-primary" size={28}/>
+                             <p className="font-display text-xl text-navy font-light">
+                                 We build the engine. <em className="italic text-primary">You drive the growth.</em>
+                             </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="text-center mt-6">
+                    <Link
+                        to="/apply"
+                        className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-primary text-white font-body font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-xl shadow-teal-500/20"
+                    >
+                        Schedule A Free 1:1 Discovery Call
+                        <ArrowRight size={22} className="group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                </div>
             </div>
-          ))}
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
-          {reasons.map((r, i) => (
-            <div
-              key={i}
-              className="bg-card border border-border rounded-xl p-6 shadow-card hover:border-teal/30 hover:shadow-teal transition-all group"
-            >
-              <div className="p-2.5 rounded-lg bg-teal-light border border-teal/20 w-fit mb-4 group-hover:bg-teal group-hover:border-teal transition-colors">
-                <r.icon size={19} className="text-teal group-hover:text-primary-foreground transition-colors" />
-              </div>
-              <h3 className="font-display font-semibold text-navy text-base mb-2 leading-snug">{r.title}</h3>
-              <p className="font-body text-muted-foreground text-sm leading-relaxed">{r.desc}</p>
-            </div>
-          ))}
-        </div>
-
-        <div className="text-center">
-          <Link
-            to="/apply"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-teal text-primary-foreground font-body font-semibold text-base hover:opacity-90 transition-all shadow-teal"
-          >
-            Schedule A Free 1:1 Discovery Call
-            <ArrowRight size={18} />
-          </Link>
-        </div>
-      </div>
-    </section>
-  );
+        </section>
+    );
 };
 
 export default WhyUs;

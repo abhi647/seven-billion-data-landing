@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import defaultTheme from "tailwindcss/defaultTheme";
 
 export default {
   darkMode: ["class"],
@@ -14,8 +15,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ["Newsreader", "Georgia", "serif"],
-        body: ["Inter", "sans-serif"],
+        sans: ["var(--font-sans)", ...defaultTheme.fontFamily.sans],
+        display: ['Newsreader', 'Georgia', 'serif'],
+        body: ['Inter', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

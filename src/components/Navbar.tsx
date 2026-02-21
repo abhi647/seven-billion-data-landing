@@ -6,45 +6,40 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-card/95 backdrop-blur-md">
-      <div className="container mx-auto flex h-16 items-center justify-between px-6">
-        <Link to="/" className="flex items-center gap-2">
-          <div className="flex items-center gap-1.5">
-            <div className="h-7 w-7 rounded bg-gradient-teal flex items-center justify-center">
-              <span className="font-display text-xs font-bold text-primary-foreground">7B</span>
-            </div>
-            <span className="font-display text-lg font-semibold text-navy">
-              Seven Billion <span className="text-teal">Data</span>
-            </span>
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-gray-100 bg-white/80 backdrop-blur-xl shadow-sm">
+      <div className="container mx-auto flex h-20 items-center justify-between px-6">
+        <Link to="/" className="flex items-center gap-3 group">
+          <div className="flex items-center gap-2">
+            <img src="/custom-logo.svg" alt="Seven Billion Data" className="h-8 w-auto" />
           </div>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8">
-          <a href="#case-studies" className="font-body text-sm text-muted-foreground hover:text-teal transition-colors">Case Studies</a>
-          <a href="#why-us" className="font-body text-sm text-muted-foreground hover:text-teal transition-colors">Why Us</a>
+        <nav className="hidden md:flex items-center gap-10">
+          <a href="/#case-studies" className="font-body text-sm font-medium text-gray-600 hover:text-navy transition-colors">Case Studies</a>
+          <a href="/#why-us" className="font-body text-sm font-medium text-gray-600 hover:text-navy transition-colors">Why Us</a>
           <Link
             to="/apply"
-            className="inline-flex items-center px-4 py-2 rounded-md bg-teal text-primary-foreground font-body text-sm font-semibold hover:opacity-90 transition-all shadow-teal"
+            className="inline-flex items-center px-6 py-2.5 rounded-full bg-primary text-white font-body text-sm font-semibold hover:scale-[1.02] transition-all duration-300 shadow-sm hover:shadow"
           >
             Book Free Strategy Call
           </Link>
         </nav>
 
         <button
-          className="md:hidden text-muted-foreground hover:text-foreground"
+          className="md:hidden text-navy hover:text-primary"
           onClick={() => setMobileOpen(!mobileOpen)}
         >
-          {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+          {mobileOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
       {mobileOpen && (
-        <div className="md:hidden border-t border-border bg-card px-6 py-4 flex flex-col gap-4">
-          <a href="#case-studies" className="font-body text-sm text-muted-foreground hover:text-teal" onClick={() => setMobileOpen(false)}>Case Studies</a>
-          <a href="#why-us" className="font-body text-sm text-muted-foreground hover:text-teal" onClick={() => setMobileOpen(false)}>Why Us</a>
+        <div className="md:hidden border-t border-gray-100 bg-white/95 backdrop-blur-xl px-6 py-6 flex flex-col gap-5 shadow-lg">
+          <a href="/#case-studies" className="font-body text-base font-medium text-gray-700 hover:text-primary" onClick={() => setMobileOpen(false)}>Case Studies</a>
+          <a href="/#why-us" className="font-body text-base font-medium text-gray-700 hover:text-primary" onClick={() => setMobileOpen(false)}>Why Us</a>
           <Link
             to="/apply"
-            className="inline-flex items-center justify-center px-4 py-2 rounded-md bg-teal text-primary-foreground font-body text-sm font-semibold"
+            className="inline-flex items-center justify-center px-6 py-3.5 rounded-full bg-primary text-white font-body text-base font-bold mt-2 shadow-sm"
             onClick={() => setMobileOpen(false)}
           >
             Book Free Strategy Call
