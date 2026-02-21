@@ -13,10 +13,10 @@ const CaseStudies = () => {
           </p>
           
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-             <img src="/logo1.png" alt="Client Logo" className="h-16 md:h-20 object-contain rounded-xl mix-blend-multiply" />
-             <img src="/logo1.png" alt="Client Logo" className="h-16 md:h-20 object-contain rounded-xl mix-blend-multiply" />
-             <img src="/logo1.png" alt="Client Logo" className="h-16 md:h-20 object-contain rounded-xl mix-blend-multiply" />
-             <img src="/logo1.png" alt="Client Logo" className="h-16 md:h-20 object-contain rounded-xl mix-blend-multiply hidden md:block" />
+             <img src="/image 46.png" alt="Client Logo 1" className="w-28 md:w-36 h-10 md:h-12 object-contain mix-blend-multiply" />
+             <img src="/image 80.png" alt="Client Logo 2" className="w-28 md:w-36 h-10 md:h-12 object-contain mix-blend-multiply" />
+             <img src="/image 81.png" alt="Client Logo 3" className="w-28 md:w-36 h-10 md:h-12 object-contain mix-blend-multiply" />
+             <img src="/image 82.png" alt="Client Logo 4" className="w-28 md:w-36 h-10 md:h-12 object-contain mix-blend-multiply hidden md:block" />
           </div>
         </div>
 
