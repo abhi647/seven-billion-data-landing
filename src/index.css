@@ -183,4 +183,35 @@
     width: 100% !important;
     max-width: 100% !important;
   }
+
+  /* Flowchart Animations for Comprehensive Look */
+  @keyframes flow-horizontal {
+    0% { left: 0%; opacity: 0; transform: translateX(-50%); }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { left: 100%; opacity: 0; transform: translateX(-50%); }
+  }
+  
+  @keyframes pulse-ring {
+    0% { transform: scale(0.8); opacity: 0.5; }
+    50% { transform: scale(1.2); opacity: 0; }
+    100% { transform: scale(0.8); opacity: 0; }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
+
+  .animate-flow {
+    animation: flow-horizontal 3s linear infinite;
+  }
+  
+  .animate-pulse-ring {
+    animation: pulse-ring 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
+  }
 }

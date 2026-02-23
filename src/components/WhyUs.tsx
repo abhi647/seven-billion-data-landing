@@ -4,11 +4,11 @@ import { ArrowRight, CheckCircle2, XCircle, TrendingUp } from "lucide-react";
 const objections = [
   {
     objection: "We tried building this internally, but IT took 8 months and the dashboards were unusable.",
-    reality: "Internal IT teams are brilliant at infrastructure, but they aren't <strong class='text-teal-700'>commercial data specialists</strong>. We <em>only</em> build for FMCG. We bring pre-built data models for secondary sales, distributor margins, and inventory tracking, which is why our rollout takes 90-120 days, not absolute years."
+    reality: "Internal IT teams are brilliant at infrastructure, but they aren't <strong class='text-teal-700'>commercial data specialists</strong>. We <em>only</em> build for enterprises. We bring pre-built data models for secondary sales, distributor margins, and inventory tracking, which is why our rollout takes 90-120 days, not absolute years."
   },
   {
     objection: "We use a big consulting firm (Big 4) and we still don't have a single source of truth.",
-    reality: "Big consultancies charge for the <em>process</em> (hours billed), not the <em>outcome</em>. We deploy a specific framework, the FMCG Decision Engine. You aren't paying for juniors to learn on your dime; you're getting a <strong class='text-teal-700'>proven system implemented by veterans</strong> with zero bloated retainer fees."
+    reality: "Big consultancies charge for the <em>process</em> (hours billed), not the <em>outcome</em>. We deploy a specific framework, the Enterprise Decision Engine. You aren't paying for juniors to learn on your dime; you're getting a <strong class='text-teal-700'>proven system implemented by veterans</strong> with zero bloated retainer fees."
   },
   {
     objection: "Our data is too messy. Distributors send manual Excel files. It's impossible to automate.",
@@ -25,7 +25,7 @@ const WhyUs = () => {
                 <div className="text-center mb-16 animate-fade-in-up">
                     <h2 className="font-display text-4xl lg:text-5xl font-light text-navy mb-8 tracking-tight">
                         Why Traditional Approaches Keep <br className="hidden md:block"/> 
-                        <em className="italic text-primary">FMCG Brands Stuck</em>
+                        <em className="italic text-primary">Enterprises Stuck</em>
                     </h2>
                     <p className="font-body text-gray-600 text-lg md:text-xl font-light max-w-2xl mx-auto">
                         We hear the same frustrations from CIOs every week. Here is why the standard playbook is failing you—and what we do differently.

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle2, Calendar, PlayCircle } from "lucide-react";
+import AnimatedFlowchart from "./AnimatedFlowchart";
 
 const Hero = () => {
   return (
@@ -19,7 +20,7 @@ const Hero = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-teal-500"></span>
             </span>
-            ATTENTION: CIOs & Digital Transformation Heads in Indian FMCG
+            ATTENTION: CIOs & Digital Transformation Heads in Enterprises
           </div>
 
           {/* Specific Benefit Driven Headline */}
@@ -32,7 +33,7 @@ const Hero = () => {
 
           {/* Subheadline (USP & Pain Points) */}
           <p className="font-body text-foreground/80 text-lg md:text-xl leading-relaxed mb-10 max-w-2xl mx-auto font-light">
-            We help FMCG enterprises unify fragmented ERP, distributor, and sales operations data into 
+            We help enterprises unify fragmented ERP, distributor, and sales operations data into 
             an automated Decision Intelligence system—without hiring an expensive internal data team.
           </p>
 
@@ -59,17 +60,9 @@ const Hero = () => {
           {/* Overlay to dim VSL placeholder slightly */}
           <div className="absolute inset-0 bg-black/5 z-10 pointer-events-none group-hover:bg-transparent transition-colors duration-500"></div>
 
-          {/* VSL Video Player */}
-          <div className="relative aspect-video bg-navy/5 rounded-2xl overflow-hidden shadow-sm">
-            <video 
-              src="/vsl-video.mp4" 
-              controls 
-              playsInline
-              className="w-full h-full object-cover"
-              poster="/dashboard-mockup.png"
-            >
-              Your browser does not support the video tag.
-            </video>
+          {/* Animated Flowchart Component */}
+          <div className="relative aspect-video rounded-2xl overflow-hidden shadow-sm">
+            <AnimatedFlowchart />
           </div>
         </div>
 

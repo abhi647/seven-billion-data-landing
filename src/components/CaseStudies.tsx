@@ -27,14 +27,14 @@ const CaseStudies = () => {
                 <div className="relative z-10">
                     <p className="font-body text-primary font-medium uppercase tracking-widest text-sm mb-2">Case Study #1</p>
                     <h3 className="font-display text-3xl font-light text-navy mb-2">60% Faster Monthly Closing Time</h3>
-                    <p className="font-body text-gray-500 text-lg mb-8 font-light">National FMCG Brand (₹800 Cr+ Revenue)</p>
+                    <p className="font-body text-gray-500 text-lg mb-8 font-light">National Enterprise Brand (₹800 Cr+ Revenue)</p>
 
                     <div className="space-y-6 text-gray-700 font-body leading-relaxed mb-10">
                         <p>
-                            <strong className="text-navy">The Problem:</strong> Before partnering with us, this FMCG giant had their ERP, distributor, and secondary sales systems running in complete silos. Their leadership struggled with visibility—monthly closing was a nightmare, taking 15–20 days purely due to manual, Excel-based data consolidation. They had absolutely no single version of the truth for revenue, stock, or promotions, leading to delayed board decisions and missed market opportunities.
+                            <strong className="text-navy">The Problem:</strong> Before partnering with us, this leading enterprise had their ERP, distributor, and secondary sales systems running in complete silos. Their leadership struggled with visibility—monthly closing was a nightmare, taking 15–20 days purely due to manual, Excel-based data consolidation. They had absolutely no single version of the truth for revenue, stock, or promotions, leading to delayed board decisions and missed market opportunities.
                         </p>
                         <p>
-                            <strong className="text-navy">The Solution & Result:</strong> We implemented the FMCG Decision Engine™, building a central enterprise data warehouse with automated pipelines connecting their ERP and secondary sales data. Within 120 days, we rolled out a one-click executive dashboard delivering real-time revenue vs. target tracking, region-wise sales, and inventory health. The result? Monthly closing time was slashed by 60%, and leadership now runs reviews off a single, fully-governed BI layer.
+                            <strong className="text-navy">The Solution & Result:</strong> We implemented the Enterprise Decision Engine™, building a central enterprise data warehouse with automated pipelines connecting their ERP and secondary sales data. Within 120 days, we rolled out a one-click executive dashboard delivering real-time revenue vs. target tracking, region-wise sales, and inventory health. The result? Monthly closing time was slashed by 60%, and leadership now runs reviews off a single, fully-governed BI layer.
                         </p>
                     </div>
 
@@ -58,14 +58,14 @@ const CaseStudies = () => {
                 <div className="relative z-10">
                     <p className="font-body text-cyan-600 font-medium uppercase tracking-widest text-sm mb-2">Case Study #2</p>
                     <h3 className="font-display text-3xl font-light text-navy mb-2">Eliminated Stock-out Blind Spots Regionally</h3>
-                    <p className="font-body text-gray-500 text-lg mb-8 font-light">Regional FMCG Challenger (₹250 Cr Revenue)</p>
+                    <p className="font-body text-gray-500 text-lg mb-8 font-light">Regional Challenger Brand (₹250 Cr Revenue)</p>
 
                     <div className="space-y-6 text-gray-700 font-body leading-relaxed mb-10">
                         <p>
-                            <strong className="text-navy">The Problem:</strong> This rapidly growing regional FMCG brand was suffering from severe growing pains. Sales teams were sending data in entirely different formats depending on their region. This fragmented data caused extremely poor demand visibility, resulting in frequent, costly stock-outs in high-demand areas while simultaneously overstocking in slower regions. Forecasting was essentially done on guesswork using static spreadsheets.
+                            <strong className="text-navy">The Problem:</strong> This rapidly growing regional brand was suffering from severe growing pains. Sales teams were sending data in entirely different formats depending on their region. This fragmented data caused extremely poor demand visibility, resulting in frequent, costly stock-outs in high-demand areas while simultaneously overstocking in slower regions. Forecasting was essentially done on guesswork using static spreadsheets.
                         </p>
                         <p>
-                            <strong className="text-navy">The Solution & Result:</strong> We deployed Phases 1 & 2 of the FMCG Decision Engine (Data Foundation + Infrastructure Build). We standardized their KPIs and automated both sales and inventory dashboards across all regional branches. Within 90 days, we dramatically improved their forecast accuracy. They eliminated stock-out blind spots completely and stopped severe revenue leakage by catching supply chain bottlenecks weeks earlier than before.
+                            <strong className="text-navy">The Solution & Result:</strong> We deployed Phases 1 & 2 of the Enterprise Decision Engine (Data Foundation + Infrastructure Build). We standardized their KPIs and automated both sales and inventory dashboards across all regional branches. Within 90 days, we dramatically improved their forecast accuracy. They eliminated stock-out blind spots completely and stopped severe revenue leakage by catching supply chain bottlenecks weeks earlier than before.
                         </p>
                     </div>
 
@@ -88,7 +88,7 @@ const CaseStudies = () => {
               Ready to stop guessing and start running on real data?
             </h3>
             <p className="font-body text-teal-900 mb-8 max-w-xl mx-auto font-light">
-              We have limited capacity. Book your free Decision Tool audit to see what's possible for your FMCG brand.
+              We have limited capacity. Book your free Decision Tool audit to see what's possible for your business.
             </p>
             <Link
               to="/apply"
@@ -106,11 +106,11 @@ const CaseStudies = () => {
                 <div className="relative z-10">
                     <p className="font-body text-blue-600 font-medium uppercase tracking-widest text-sm mb-2">Case Study #3</p>
                     <h3 className="font-display text-3xl font-light text-navy mb-2">Automated Executive Command Center</h3>
-                    <p className="font-body text-gray-500 text-lg mb-8 font-light">Diversified FMCG (Multi-Plant Manufacturing)</p>
+                    <p className="font-body text-gray-500 text-lg mb-8 font-light">Diversified Enterprise (Multi-Plant Manufacturing)</p>
 
                     <div className="space-y-6 text-gray-700 font-body leading-relaxed mb-10">
                         <p>
-                            <strong className="text-navy">The Problem:</strong> This multi-plant manufacturing FMCG was crippled by conflicting data. Leadership was constantly receiving contradictory numbers from finance, sales, and operations. There was zero central governance; data definitions (like 'net revenue' or 'active SKUs') differed wildly across departments. Because of these chronic data conflicts, critical board decisions were routinely delayed while analysts spent weeks doing manual rework.
+                            <strong className="text-navy">The Problem:</strong> This multi-plant manufacturing business was crippled by conflicting data. Leadership was constantly receiving contradictory numbers from finance, sales, and operations. There was zero central governance; data definitions (like 'net revenue' or 'active SKUs') differed wildly across departments. Because of these chronic data conflicts, critical board decisions were routinely delayed while analysts spent weeks doing manual rework.
                         </p>
                         <p>
                             <strong className="text-navy">The Solution & Result:</strong> We stepped in and implemented a strictly governed data warehouse combined with rigorous KPI architecture alignment across all departments. In just 4 months, we successfully rolled out an executive KPI command center featuring a standardized one-page monthly summary for the entire CXO team. Decision-making velocity improved drastically because everyone was finally working off the exact same, irrefutable numbers.
